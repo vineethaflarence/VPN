@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <title>Student Template</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+ 
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+.list{
+    margin:10px;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight:bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+ 
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+.click-here{
+    color:#042361;
+    font-weight:bold;
+
+}
+.header{
+    color:#042361;
+    font-size:25px;
+    margin:10px;
+    font-weight: bold;
+}
+.line{
+    border:2px solid #f5ac02;
+    width:200px;
+    margin:10px;
+}
+</style>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="logo.png" style="width:100px;height:80px;"></a>
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="myNavbar">
+       <h3 style="font-weight:bold;margin-left:130px;color:#042361;">VPN Instructions</h3>
+       
+        </div>
+    </nav>
+    <div class="container">
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Instructions For Windows</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Instructions For Linux</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Instructions For MacOs</button>
+  <button class="tablinks" onclick="openCity(event, 'China')">Instructions For Ipad</button>
+  <button class="tablinks" onclick="openCity(event, 'Russia')">Instructions For Android</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3 class="header">Instructions For Windows</h3>
+  <div class="line"></div>
+  <div class="content" id="window">
+    <ul class="list">
+        <li style="font-size:18px;margin:10px;">Download OpenVPN configuration file from <a href="https://vpn.iiit.ac.in" class="click-here" target="_blank">https://vpn.iiit.ac.in</a> and download OpenVPN client for windows <a href="https://openvpn.net/community-downloads/" class="click-here" target="_blank">https://openvpn.net/community-downloads/</a> . Provide Email address and email Password to download the config file.</li>
+        <li style="font-size:18px;margin:10px;">Right click the downloaded OpenVPN executable file and choose `Run as administrator' for installing OpenVPN.</li> 
+        <li style="font-size:18px;margin:10px;">After installation open the OpenVPN client which will shown on the desktop with name of OpenVPN GUI or search in the all programs or click on the monitor type icon which was at right corner task bar and import the config file which was downloaded.</li>
+        <li style="font-size:18px;margin:10px;">Once after it shows file import was successful then again click on the monitor type icon which was at right corner task bar and select connect.</li>
+        <li style="font-size:18px;margin:10px;">It will ask for the credentials to connect please provide your full email id and password and click on connect. It shows you are connected and changes the colour to green then you are successfully connected to the IIIT Network.</li>
+        <li style="font-size:18px;margin:10px;">You can disconnect the VPN by clicking on the disconnect option.</li>
+        </ul>
+  </div>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3  class="header">Instructions For Linux</h3>
+  <div class="line"></div>
+  <ul class="list">
+  
+    <li style="font-size:18px;margin:10px;"><strong>For Ubuntu download the ovpn file from <a href="https://vpn.iiit.ac.in" class="click-here" target="_blank"> https://vpn.iiit.ac.in</a>. Provide Email address and email Password to download the config file.</strong></li>
+      <ul> 
+      <li style="font-size:18px;margin:10px;">Install OpenVPN using terminal, use this command `sudo apt install openvpn`</li>
+    <li style="font-size:18px;margin:10px;">After installation use this command `sudo openvpn --config path_to_your_downloaded_ubuntu.ovpn` to start OpenVPN tunnel.</li>
+    <li style="font-size:18px;margin:10px;">When asked for username and password, please enter your IIIT email address as username and password.</li>
+    <li style="font-size:18px;margin:10px;">It will show that 'Process Initialisation Complete' message then your VPN was successfully configured.</li>
+    <li style="font-size:18px;margin:10px;">To disconnect just press 'Ctrl+C' in terminal in which you have started openVPN client.</li>
+   </ul>
+   <li style="font-size:18px;margin:10px;"><strong>Others Linux OS:</strong></li>
+   <ul>
+    <li style="font-size:18px;margin:10px;">Install OpenVPN package using yum, pacman, dnf, synaptic, yast etc. based on which Linux distribution you are using. All standard Linux distriubtion support openVPN installation using standard repositories.</li>
+    <li style="font-size:18px;margin:10px;">After connecting to VPN If you are facing any issues like ssh. Please add dns and name server in /etc/resolv.conf as shown in the below steps.</li>
+    <li style="font-size:18px;margin:10px;">Open terminal with sudo permission and open file `/etc/resolv.conf' and add line `nameserver 10.4.20.21’ at top of this file.</li>
+    <li style="font-size:18px;margin:10px;">To disconnect just press 'Ctrl+C' in terminal in which you have started openVPN client. Also remove entry for `nameserver 10.4.20.21’ from `/etc/resolv.conf' file.</li>
+   </ul>
+   <li style="font-size:18px;margin:10px;"><strong>For Ubuntu 18.04 and Later</strong></li>
+   <ul>
+    <li style="font-size:18px;margin:10px;">Note: For new version of Ubuntu 18.04 and 20.04 Later. Please follow the below steps to configure the VPN.</li>
+  <li style="font-size:18px;margin:10px;">Download New VPN file for new version <a href="https://vpn.iiit.ac.in/secure/For_18_20_ubuntu.ovpn" class="click-here" target="_blank">ubuntu.ovpn</a>. Provide Email address and email Password to download the config file.</li> 
+  <li style="font-size:18px;margin:10px;">Run the below commands if you have any issues while connecting to VPN.</li> 
+  <li style="font-size:18px;margin:10px;">#apt install resolvconf
+  <br>#systemctl start resolvconf<br>#systemctl enable resolvconf<br>$sudo openvpn --config ubuntu.ovpn (New file path)</li> 
+  </ul>
+    </ul>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3  class="header">Instructions For MacOs</h3>
+  <div class="line"></div>
+  <ul class="list">
+    <li style="font-size:18px;margin:10px;">Download Tunnelblick 4.0.0beta11 from the official site.<a href="https://tunnelblick.net/downloads.html" class="click-here" target="_blank">https://tunnelblick.net/downloads.html </a> </li>
+    <li style="font-size:18px;margin:10px;">Install Tunnelblick then download the generic file from <a href="https://vpn.iiit.ac.in" class="click-here" target="_blank">https://vpn.iiit.ac.in</a>. Provide Email address and email Password to download the config file.</li>
+    <li style="font-size:18px;margin:10px;">After Tunnelblick installation was done open it from apps. You can see the opened Tunnelblick at right corner of the screen at status bar with the symbol of reverse U.</li>
+    <li style="font-size:18px;margin:10px;">Then open the generic config file it will ask for only user or all users, select based on your usage.</li>
+    <li style="font-size:18px;margin:10px;">Now your generic config file was successfully imported to Tunnelblick.</li>
+    <li style="font-size:18px;margin:10px;">Now open Tunnelblick and click on connect it will ask for username and password. Please provide the full email address and email password and click on connect generic.</li>
+    <li style="font-size:18px;margin:10px;">After authorisation you will be connected to the VPN and it will show as connected. (Please ignore if any warnings) </li>
+  </ul>
+</div>
+<div id="China" class="tabcontent">
+  <h3  class="header">Instructions For Ipad</h3>
+  <div class="line"></div>
+  <ul class="list">
+    <li style="font-size:18px;margin:10px;">Download and install the Open VPN app from the app store<a href="https://apps.apple.com/in/app/openvpn-connect" class="click-here" target="_blank"> https://apps.apple.com/in/app/openvpn-connect</a> </li>
+    <li style="font-size:18px;margin:10px;">Generic ovpn config file will work for the iPad. Which can be download from our vpn site <a href="https://vpn.iiit.ac.in/secure/generic.ovpn " class="click-here" target="_blank">https://vpn.iiit.ac.in/secure/generic.ovpn </a>Provide Email address and email Password to download the config file.</li>
+    <li style="font-size:18px;margin:10px;">After downloading the file on iPad, import the generic file in the openVPN app and click on connect the VPN. It will ask for the username and password.</li>
+    <li style="font-size:18px;margin:10px;">Please provide the IIIT full Email address and Password. Now you are connected to the VPN.</li>
+    
+  </ul>
+</div>
+<div id="Russia" class="tabcontent">
+  <h3  class="header">Instructions For Android</h3>
+  <div class="line"></div>
+  <ul class="list">
+    <li style="font-size:18px;margin:10px;">Download and install the OpenVPN app from the PlayStore.</li>
+    <li style="font-size:18px;margin:10px;">Download the config file from or official site. <a href="https://vpn.iiit.ac.in" class="click-here" target="_blank">https://vpn.iiit.ac.in</a>. Provide Email address and email Password to download the config file.</li>
+    <li style="font-size:18px;margin:10px;">Import the android config file to the openVPN app and connect the VPN, It will ask for the username and password.</li>
+    <li style="font-size:18px;margin:10px;">Please provide the IIIT full Email address and Password. Now you are connected to the VPN.</li>
+    
+  </ul>
+</div>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
